@@ -1,0 +1,3 @@
+[submodule "subclip-api"]
+	path = subclip-api
+	url = git@github.com:clmntgbr/subclip-api.git
