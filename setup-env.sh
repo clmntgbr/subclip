@@ -5,7 +5,7 @@ API_ENV="subclip-api/.env.dist"
 LOCAL_ENV="subclip-api/.env"
 
 # Check if source files exist
-if [ ! -f "$API_ENV" ] || [ ! -f "$SOUND_ENV" ]; then
+if [ ! -f "$API_ENV" ]; then
     echo "Source environment files not found"
     exit 1
 fi
