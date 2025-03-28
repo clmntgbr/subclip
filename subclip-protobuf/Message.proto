@@ -1,0 +1,64 @@
+syntax = "proto3";
+
+package App.Protobuf;
+
+option php_namespace = "App\\Protobuf";
+option php_metadata_namespace = "App\\Protobuf\\GPBMetadata";
+
+message MicroServicesMessage {
+    Clip clip = 1;
+    string service = 2;
+}
+
+enum ClipStatus {
+    UPLOADED = 0;
+
+    SOUND_EXTRACTOR_PENDING = 1;
+    SOUND_EXTRACTOR_COMPLETE = 2;
+    SOUND_EXTRACTOR_ERROR = 3;
+
+    SUBTITLE_GENERATOR_PENDING = 4;
+    SUBTITLE_GENERATOR_COMPLETE = 5;
+    SUBTITLE_GENERATOR_ERROR = 6;
+
+    SUBTITLE_MERGER_PENDING = 7;
+    SUBTITLE_MERGER_COMPLETE = 8;
+    SUBTITLE_MERGER_ERROR = 9;
+
+    SUBTITLE_TRANSFORMER_PENDING = 10;
+    SUBTITLE_TRANSFORMER_COMPLETE = 11;
+    SUBTITLE_TRANSFORMER_ERROR = 12;
+
+    SUBTITLE_INCRUSTATOR_PENDING = 13;
+    SUBTITLE_INCRUSTATOR_COMPLETE = 14;
+    SUBTITLE_INCRUSTATOR_ERROR = 15;
+
+    VIDEO_FORMATTER_PENDING = 16;
+    VIDEO_FORMATTER_COMPLETE = 17;
+    VIDEO_FORMATTER_ERROR = 18;
+
+    VIDEO_SPLITTER_PENDING = 19;
+    VIDEO_SPLITTER_COMPLETE = 20;
+    VIDEO_SPLITTER_ERROR = 21;
+
+    VIDEO_INCRUSTATOR_PENDING = 22;
+    VIDEO_INCRUSTATOR_COMPLETE = 23;
+    VIDEO_INCRUSTATOR_ERROR = 24;
+
+    VIDEO_READY = 25;
+}
+
+message Clip {
+    string id = 1;
+    string userId = 2;
+    string status = 3;
+    Video originalVideo = 4;
+}
+
+message Video {
+    string id = 1;
+    string originalName = 2;
+    optional string name = 3;
+    string mimeType = 4;
+    optional int64 size = 5;
+}
