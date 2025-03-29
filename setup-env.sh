@@ -1,19 +1,24 @@
 #!/bin/bash
 
 ROOT_ENV=".env.local"
+
 API_ENV="subclip-api/.env.dist"
-LOCAL_ENV="subclip-api/.env"
+API_LOCAL_ENV="subclip-api/.env"
+
+SOUND_ENV="subclip-sound-extractor/.env"
+SOUND_LOCAL_ENV="subclip-sound-extractor/.env.local"
 
 # Check if source files exist
-if [ ! -f "$API_ENV" ]; then
+if [ ! -f "$API_ENV" ] || [ ! -f "$SOUND_ENV" ]; then
     echo "Source environment files not found"
     exit 1
 fi
 
-rm -r "$LOCAL_ENV" 2> /dev/null
+rm -r "$API_LOCAL_ENV" "$SOUND_LOCAL_ENV" 2> /dev/null
 
 # Create local copies
-cp "$API_ENV" "$LOCAL_ENV"
+cp "$API_ENV" "$API_LOCAL_ENV"
+cp "$SOUND_ENV" "$SOUND_LOCAL_ENV"
 
 # Improved get_env_var function that handles quoted values
 get_env_var() {
@@ -69,4 +74,5 @@ replace_env_vars() {
 }
 
 # Perform replacements
-replace_env_vars "$API_ENV" "$LOCAL_ENV"
+replace_env_vars "$API_ENV" "$API_LOCAL_ENV"
+replace_env_vars "$SOUND_ENV" "$SOUND_LOCAL_ENV"

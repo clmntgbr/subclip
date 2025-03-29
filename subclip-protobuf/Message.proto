@@ -10,6 +10,11 @@ message MicroServicesMessage {
     string service = 2;
 }
 
+message ApiMessage {
+    Clip clip = 1;
+    string service = 2;
+}
+
 enum ClipStatus {
     UPLOADED = 0;
 
@@ -53,6 +58,7 @@ message Clip {
     string userId = 2;
     string status = 3;
     Video originalVideo = 4;
+    string cover = 5;
 }
 
 message Video {
@@ -61,4 +67,9 @@ message Video {
     optional string name = 3;
     string mimeType = 4;
     optional int64 size = 5;
+    optional int64 length = 6;
+    optional string subtitle = 7;
+    optional string ass = 8;
+    repeated string subtitles = 9;
+    repeated string audios = 10;
 }

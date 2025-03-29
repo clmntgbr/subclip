@@ -1,3 +1,6 @@
 [submodule "subclip-api"]
 	path = subclip-api
 	url = git@github.com:clmntgbr/subclip-api.git
+[submodule "subclip-sound-extractor"]
+	path = subclip-sound-extractor
+	url = git@github.com:clmntgbr/subclip-sound-extractor.git
