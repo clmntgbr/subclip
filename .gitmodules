@@ -4,3 +4,6 @@
 [submodule "subclip-sound-extractor"]
 	path = subclip-sound-extractor
 	url = git@github.com:clmntgbr/subclip-sound-extractor.git
+[submodule "subclip-protobuf"]
+	path = subclip-protobuf
+	url = git@github.com:clmntgbr/subclip-protobuf.git
