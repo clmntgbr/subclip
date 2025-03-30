@@ -7,3 +7,6 @@
 [submodule "subclip-protobuf"]
 	path = subclip-protobuf
 	url = git@github.com:clmntgbr/subclip-protobuf.git
+[submodule "subclip-subtitle-generator"]
+	path = subclip-subtitle-generator
+	url = git@github.com:clmntgbr/subclip-subtitle-generator.git
