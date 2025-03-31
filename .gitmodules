@@ -13,3 +13,6 @@
 [submodule "subclip-subtitle-merger"]
 	path = subclip-subtitle-merger
 	url = git@github.com:clmntgbr/subclip-subtitle-merger.git
+[submodule "subclip-subtitle-transformer"]
+	path = subclip-subtitle-transformer
+	url = git@github.com:clmntgbr/subclip-subtitle-transformer.git
