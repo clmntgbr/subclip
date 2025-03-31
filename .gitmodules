@@ -10,3 +10,6 @@
 [submodule "subclip-subtitle-generator"]
 	path = subclip-subtitle-generator
 	url = git@github.com:clmntgbr/subclip-subtitle-generator.git
+[submodule "subclip-subtitle-merger"]
+	path = subclip-subtitle-merger
+	url = git@github.com:clmntgbr/subclip-subtitle-merger.git

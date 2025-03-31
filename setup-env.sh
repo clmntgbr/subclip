@@ -11,18 +11,22 @@ SE_LOCAL_ENV="subclip-sound-extractor/.env.local"
 SG_ENV="subclip-subtitle-generator/.env"
 SG_LOCAL_ENV="subclip-subtitle-generator/.env.local"
 
+SM_ENV="subclip-subtitle-merger/.env"
+SM_LOCAL_ENV="subclip-subtitle-merger/.env.local"
+
 # Check if source files exist
-if [ ! -f "$API_ENV" ] || [ ! -f "$SE_ENV" ] || [ ! -f "$SG_ENV" ]; then
+if [ ! -f "$API_ENV" ] || [ ! -f "$SE_ENV" ] || [ ! -f "$SG_ENV" ] || [ ! -f "$SM_ENV" ]; then
     echo "Source environment files not found"
     exit 1
 fi
 
-rm -r "$API_LOCAL_ENV" "$SE_LOCAL_ENV" "$SG_LOCAL_ENV" 2> /dev/null
+rm -r "$API_LOCAL_ENV" "$SE_LOCAL_ENV" "$SG_LOCAL_ENV" "$SM_LOCAL_ENV" 2> /dev/null
 
 # Create local copies
 cp "$API_ENV" "$API_LOCAL_ENV"
 cp "$SE_ENV" "$SE_LOCAL_ENV"
 cp "$SG_ENV" "$SG_LOCAL_ENV"
+cp "$SM_ENV" "$SM_LOCAL_ENV"
 
 # Improved get_env_var function that handles quoted values
 get_env_var() {
@@ -81,3 +85,4 @@ replace_env_vars() {
 replace_env_vars "$API_ENV" "$API_LOCAL_ENV"
 replace_env_vars "$SE_ENV" "$SE_LOCAL_ENV"
 replace_env_vars "$SG_ENV" "$SG_LOCAL_ENV"
+replace_env_vars "$SM_ENV" "$SM_LOCAL_ENV"
