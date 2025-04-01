@@ -16,3 +16,6 @@
 [submodule "subclip-subtitle-transformer"]
 	path = subclip-subtitle-transformer
 	url = git@github.com:clmntgbr/subclip-subtitle-transformer.git
+[submodule "subclip-subtitle-incrustator"]
+	path = subclip-subtitle-incrustator
+	url = git@github.com:clmntgbr/subclip-subtitle-incrustator.git
