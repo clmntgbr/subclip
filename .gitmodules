@@ -19,3 +19,6 @@
 [submodule "subclip-subtitle-incrustator"]
 	path = subclip-subtitle-incrustator
 	url = git@github.com:clmntgbr/subclip-subtitle-incrustator.git
+[submodule "subclip-video-formatter"]
+	path = subclip-video-formatter
+	url = git@github.com:clmntgbr/subclip-video-formatter.git
