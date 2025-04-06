@@ -1,3 +1,6 @@
+[Privacy Policy](PrivacyPolicy.en.md)
+[Terms of Service](TermsOfService.en.md)
+
 # Subclip Microservices
 
 1. clone this repo
